@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <string>
 #include <vector>
+#include <filesystem>
 
 std::wstring AtoW(std::string const &str);
 std::string WtoA(std::wstring const &str);
@@ -122,5 +123,5 @@ double SafeConvertDouble(std::string const &str);
 
 std::wstring GetStringWithoutUnicodeChars(std::wstring const &src);
 
-std::vector<std::wstring> FileToLinesW(std::wstring const &filePath, std::wstring const &commentLineBegin = std::wstring());
-std::vector<std::string> FileToLinesA(std::wstring const &filePath, std::string const &commentLineBegin = std::string());
+std::vector<std::wstring> FileToLinesW(std::filesystem::path const &filePath, std::wstring const &commentLineBegin = std::wstring());
+std::vector<std::string> FileToLinesA(std::filesystem::path const &filePath, std::string const &commentLineBegin = std::string());

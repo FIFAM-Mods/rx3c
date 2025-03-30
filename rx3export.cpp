@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cmath>
 #include <map>
+#include "errormsg.h"
 
 using namespace std;
 using namespace std::filesystem;

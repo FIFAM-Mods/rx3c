@@ -263,7 +263,7 @@ std::wstring GetStringWithoutUnicodeChars(std::wstring const &src) {
     return str;
 }
 
-std::vector<std::wstring> FileToLinesW(std::wstring const &filePath, std::wstring const &commentLineBegin) {
+std::vector<std::wstring> FileToLinesW(std::filesystem::path const &filePath, std::wstring const &commentLineBegin) {
     std::vector<std::wstring> lines;
     FILE *file = _wfopen(filePath.c_str(), L"rb");
     if (file) {
@@ -378,7 +378,7 @@ std::vector<std::wstring> FileToLinesW(std::wstring const &filePath, std::wstrin
     return lines;
 }
 
-std::vector<std::string> FileToLinesA(std::wstring const &filePath, std::string const &commentLineBegin) {
+std::vector<std::string> FileToLinesA(std::filesystem::path const &filePath, std::string const &commentLineBegin) {
     std::vector<std::string> lines;
     FILE *file = _wfopen(filePath.c_str(), L"rb");
     if (file) {
